@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task_WeatherControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400">
+        Title="MainWindow" Height="400" Width="400" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -35,10 +35,10 @@
         <Label Grid.Column="1" Grid.Row="1" Content="Температура:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
         <Label Grid.Column="1" Grid.Row="2" Content="Направление ветра:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
         <Label Grid.Column="1" Grid.Row="3" Content="Скорость ветра:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
-        <TextBox Grid.Column="2" Grid.Row="0" x:Name="tb_Weather" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}"/>
-        <TextBox Grid.Column="2" Grid.Row="1" x:Name="tb_Temprature" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}"/>
-        <TextBox Grid.Column="2" Grid.Row="2" x:Name="tb_WindDirection" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" />
-        <TextBox Grid.Column="2" Grid.Row="3" x:Name="tb_Wind" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}"/>
+        <TextBox Grid.Column="2" Grid.Row="0" IsReadOnly="True" x:Name="tb_Weather" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}"/>
+        <TextBox Grid.Column="2" Grid.Row="1" IsReadOnly="True" x:Name="tb_Temprature" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}"/>
+        <TextBox Grid.Column="2" Grid.Row="2" IsReadOnly="True" x:Name="tb_WindDirection" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" />
+        <TextBox Grid.Column="2" Grid.Row="3" IsReadOnly="True" x:Name="tb_Wind" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}"/>
             <Button x:Name="ButtonWeather" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Margin="5" Padding="5" Content="Сгенерировать новую погоду!" Click="ButtonWeather_Click"/>
     </Grid>
 </Window>

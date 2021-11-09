@@ -74,9 +74,11 @@ namespace Task_WeatherControl
                 default:
                     break;
             }
+        }
 
-
-
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            ButtonWeather_Click(sender, e);
         }
     }
     class WeatherControl : DependencyObject
